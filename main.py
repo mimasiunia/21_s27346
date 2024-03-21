@@ -1,16 +1,21 @@
-# This is a sample Python script.
+from square_generator.square_generator import SquareGeneratorImpl, CubicGenerator
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+try:
+    square_generator = SquareGeneratorImpl()
+    start_range = 1
+    end_range = 10
+    squares_list = square_generator.generate_squares(start_range, end_range)
+    square_roots_list = square_generator.square_roots(squares_list)
+    print("Squares:", squares_list)
+    print("Square Roots:", square_roots_list)
+except ValueError as e:
+    print(e)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+try:
+    cubic_generator = CubicGenerator()
+    start_range = 1
+    end_range = 10
+    cubes_list = cubic_generator.generate_squares(start_range, end_range)
+    print("Cubes:", cubes_list)
+except ValueError as e:
+    print(e)
