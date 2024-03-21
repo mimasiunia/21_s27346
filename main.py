@@ -1,4 +1,4 @@
-from square_generator import SquareGenerator
+from square_generator.square_generator import SquareGenerator
 
 square_generator = SquareGenerator()
 start_range = 1
