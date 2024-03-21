@@ -4,8 +4,7 @@ import math
 class SquareGenerator:
     def generate_squares(self, start, end):
         if end < start:
-            print("End of the range must be greater or equal to the start.")
-            return []
+            raise ValueError("End of the range must be greater than the start.")
 
         return [x ** 2 for x in range(start, end + 1)]
 
@@ -15,7 +14,4 @@ class SquareGenerator:
 
 class CubicGenerator(SquareGenerator):
     def generate_squares(self, start, end):
-        if end < start:
-            return []
-
         return [x ** 3 for x in range(start, end + 1)]
