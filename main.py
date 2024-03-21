@@ -1,8 +1,7 @@
-from square_generator.square_generator import SquareGenerator
-from square_generator.square_generator import CubicGenerator
+from square_generator.square_generator import SquareGeneratorImpl, CubicGenerator
 
 try:
-    square_generator = SquareGenerator()
+    square_generator = SquareGeneratorImpl()
     start_range = 1
     end_range = 10
     squares_list = square_generator.generate_squares(start_range, end_range)
